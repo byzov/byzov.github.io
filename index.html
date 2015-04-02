@@ -36,11 +36,11 @@ a:hover {
 
 .title {
   color: #cb4b16;
-  font-size: 60px;
+  font-size: 200%;
   text-align: center;
 }
 .console {
-  font-size: 90px;
+  font-size: 300%;
   margin: 70px auto;
   width: 200px;
   text-align: center;
@@ -54,8 +54,8 @@ a:hover {
   color: #2aa198;
 }
 .console .cursor {
-  height: 110px;
-  width: 50px;
+  height: 1.2em;
+  width: 0.5em;
   background-color: #eee8d5;
   display: inline-block;
   margin-left: 10px;
@@ -103,15 +103,48 @@ a:hover {
 }
 .hr {
   text-align:center;
-  font-size: 50px;
-  height: 50px;
+  font-size: 180%;
   color: #2aa198;
 }
 .end {
-  font-size: 60px;
+  font-size: 200%;
   text-align: center;
   color: #002b36;
   font-weight: bold;
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 667px) {
+    body {
+        font-size: 54px;
+    }
+    .title {
+        font-size: 250%;
+    }
+    .wrap {
+        max-width: 900px;
+        min-width:700px;
+        margin: 300px auto;
+    }
+    .console {
+        width: 400px;
+    }
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 1)  {
+    body {
+        font-size: 45px;
+    }
+    .wrap {
+        min-width:700px;
+    }
+    .console {
+        width: 400px;
+    }
 }
 </style>
 
@@ -139,14 +172,14 @@ _gaq.push(['_trackPageview']);
       <span class="cursor">&nbsp;</span>
     </div>
     <div class="description">
-      <p class="irony">Моя работа состоит в том чтобы играть в консоли, набирать текст в редакторе и сидеть в браузере, подробнее о талантах <a href="https://linkedin.com/in/byzov" target="_blank">здесь</a>.</p>
+      <p class="irony">Моя работа состоит в том чтобы играть в консоли, набирать текст в редакторе и сидеть в браузере, подробнее о талантах <a href="https://linkedin.com/in/byzov" target="_blank" onClick="_gaq.push(['_trackEvent', 'Social', 'LinkedIn']);">здесь</a>.</p>
       <p class="hr">~</p>
-      <p class="irony">Когда появляется свободное время, трачу его на доработку этой странички. Держать руку на пульсе и следить за моим свободным времем можно <a href="https://github.com/byzov/byzov.github.io/pulse" target="_blank">тут</a>. Если там много активности, то это может означать только одно &mdash; я ищу работу.</p>
+      <p class="irony">Когда появляется свободное время, трачу его на доработку этой странички. Держать руку на пульсе и следить за моим свободным времем можно <a href="https://github.com/byzov/byzov.github.io/pulse" target="_blank" onClick="_gaq.push(['_trackEvent', 'Social', 'GitHub']);">здесь</a>. Если там много активности, то это может означать только одно &mdash; я ищу работу.</p>
       <p class="hr">~</p>
       <div class="feedback">
         Открыт для общения :)
-        <div><a href="mailto:pavel@byzov.com">pavel@byzov.com</a></div>
-        <div><a href="https://twitter.com/PavelByzov" target="_blank">@PavelByzov</a></div>
+        <div><a href="mailto:pavel@byzov.com" onClick="_gaq.push(['_trackEvent', 'Feedback', 'Mail']);">pavel@byzov.com</a></div>
+        <div><a href="https://twitter.com/PavelByzov" target="_blank" onClick="_gaq.push(['_trackEvent', 'Social', 'Twitter']);">@PavelByzov</a></div>
       </div>
     </div>
   </section>
